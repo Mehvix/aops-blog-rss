@@ -57,3 +57,4 @@ build-iPhoneSimulator/
 
 # User Defined
 /tests
+*.log
