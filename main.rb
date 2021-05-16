@@ -1,4 +1,3 @@
-require "./genRSS"
 require "sinatra/base"
 require "nokogiri"
 require "redis"
