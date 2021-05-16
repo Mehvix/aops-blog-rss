@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link
+            type="text/css"
+            rel="stylesheet"
+            href="https://mehvix.com/static/css/style.css"
+        />
+        <link
+            type="text/css"
+            rel="stylesheet"
+            href="https://mehvix.com/static/css/atom-one-dark-reasonable.css"
+        />
+        <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /> -->
+
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.3/build/highlight.min.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script>
+        <meta charset="utf-8" />
+        <title>AoPS Blog RSS Generator</title>
+        <style>
+            :root {
+                --outside-bg-color: #f26522;
+                --code-bg-color: #282c34;
+            }
+
+            #main {
+                width: 79%;
+                margin: 2em auto 1em;
+                align-items: center;
+                text-align: center;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="box">
+            <div class="nav">
+                <a href="https://mehvix.com">~</a>/<a href="" class="inverse-bg"
+                    >AoPS Blog RSS Generator</a
+                >
+            </div>
+
+            <div id="main">
+                <img
+                    src="./logo.png"
+                    alt=""
+                    style="width: 30ch; margin-bottom: 2em"
+                />
+
+                <input
+                    id="input"
+                    class="input"
+                    placeholder="https://artofproblemsolving.com/community/cXXXXXXX"
+                />
+
+                <div class="select-all">
+                    <pre><code id="output" class="output"> </code></pre>
+                </div>
+                <div>
+                    <!-- todo button css -->
+                    <button id="copy" onclick="copyF()">Copy URL</button>
+                    <button id="goto" onclick="gotoF()">Go to URL</button>
+                </div>
+            </div>
+
+            <div id="footer">
+                <table id="footerTable">
+                    <tr>
+                        <td>$BTC</td>
+                        <td>
+                            <a href="btc:15adHcuUPLHzVmUqKqgeLfLzvtfD5r7WJ1">
+                                15adHcuUPLHzVmUqKqgeLfLzvtfD5r7WJ1
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>$ETH</td>
+                        <td>
+                            <a
+                                href="eth:0xeeC384Cdef3aD975EdF1D2f6C1dC9a4b1fEEBF74"
+                                >0xeeC384Cdef3aD975EdF1D2f6C1dC9a4b1fEEBF74
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>$XMR</td>
+                        <td class="cryptoaddy" style="max-width: inherit">
+                            <a
+                                href="xmr:45MaKMYnWBnNWS4rtbrMp8C6wL1B1mguW6AjmJBGqLJkCzVUMuXwamzRfrmiwLw1WrbUptNjY1DoL4Yu4fXqTDAcDEWpuTZ"
+                                class="cryptoaddy"
+                            >
+                                45MaKMYnWBnNWS4rtbrMp8C6wL1B1mguW6AjmJBGqLJkCzVUMuXwamzRfrmiwLw1WrbUptNjY1DoL4Yu4fXqTDAcDEWpuTZ
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="footerDateYear">2021</td>
+                        <td>Max Vogel</td>
+                    </tr>
+                </table>
+            </div>
+
+            <script src="index.js"></script>
+            <script src="https://mehvix.com/static/js/include.js"></script>
+        </div>
+    </body>
+</html>
