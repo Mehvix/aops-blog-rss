@@ -6,5 +6,4 @@ gem "rake"
 gem "puma"
 gem "sinatra"
 gem "rss"
-
 gem "redis"
