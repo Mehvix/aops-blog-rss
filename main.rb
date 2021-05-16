@@ -9,7 +9,7 @@ require "redis"
 
 class Main < Sinatra::Base
     configure do
-        set :port, 1234
+        # set :port, 1234
         set :public_folder, __dir__ + '/public'
         set :server, "puma"
         # set :static, true
