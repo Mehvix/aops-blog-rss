@@ -4,7 +4,8 @@ require "redis"
 
 # todos
 # catch private blogs
-
+# feed colors + favicon
+# prevent hibernation
 
 class Main < Sinatra::Base
     configure do

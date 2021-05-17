@@ -11,7 +11,6 @@
             rel="stylesheet"
             href="https://mehvix.com/static/css/atom-one-dark-reasonable.css"
         />
-        <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /> -->
 
         <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.3/build/highlight.min.js"></script>
         <script>
@@ -26,10 +25,21 @@
             }
 
             #main {
-                width: 79%;
+                width: 82%;
                 margin: 2em auto 1em;
                 align-items: center;
                 text-align: center;
+            }
+
+            #main button {
+                font-size: 16px;
+                font-family: inherit;
+                padding: 0.4ch 0.8ch;
+                margin: 0.4em 0.2em;
+                border-radius: 5px;
+                box-shadow: 4px 4px black;
+                /* background-color: var(--code-bg-color);
+                color: var(--inside-bg-color); */
             }
         </style>
     </head>
@@ -59,9 +69,14 @@
                     <pre><code id="output" class="output"> </code></pre>
                 </div>
                 <div>
-                    <!-- todo button css -->
-                    <button id="copy" onclick="copyF()">Copy URL</button>
-                    <button id="goto" onclick="gotoF()">Go to URL</button>
+                    <button id="copy" onclick="copyF()">Copy Feed URL</button>
+                    <button id="goto" onclick="gotoF()">Go to Feed URL</button>
+                    <button
+                        id="sourcecode"
+                        onclick="window.open('https:\/\/github.com/Mehvix/aops-blog-rss')"
+                    >
+                        Go to Source Code (GPLv3)
+                    </button>
                 </div>
             </div>
 
