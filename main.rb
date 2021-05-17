@@ -17,7 +17,7 @@ class Main < Sinatra::Base
 
     def initialize
         super
-        $redis = Redis.new
+        $redis = Redis.new(url: ENV["REDISTOGO_URL"])
     end
 
     get "/" do
