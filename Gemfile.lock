@@ -4,8 +4,11 @@ GEM
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
     nio4r (2.5.7)
+    nokogiri (1.11.4-x64-mingw32)
+      racc (~> 1.4)
     puma (5.3.1)
       nio4r (~> 2.0)
+    racc (1.5.2)
     rack (2.2.3)
     rack-protection (2.1.0)
       rack
@@ -26,6 +29,7 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
+  nokogiri
   puma
   rake
   redis
