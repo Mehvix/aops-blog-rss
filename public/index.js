@@ -3,8 +3,7 @@ const output = document.getElementById("output");
 const goto = document.getElementById("goto");
 const copy = document.getElementById("copy");
 
-var pageURL = window.location.href.split("/");
-pageURL = pageURL[0] + "//" + pageURL[2] + "/";
+var pageURL = window.location.href;
 
 function gotoF(e) {
     var link = document.getElementById("output").textContent;
@@ -16,7 +15,7 @@ function gotoF(e) {
 function copyF(e) {
     var textToCopy = document.getElementById("output");
 
-    if (RegExp(pageURL + "\\d{7}").test(textToCopy)) {
+    if (RegExp(pageURL + "\\d{7}").test(textToCopy.textContent)) {
         var currentRange;
         if (document.getSelection().rangeCount > 0) {
             currentRange = document.getSelection().getRangeAt(0);
