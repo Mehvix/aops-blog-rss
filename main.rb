@@ -27,7 +27,7 @@ class Main < Sinatra::Base
 
     get "/:blog_id" do
         blog_id = params["blog_id"] #|| ENV["BLOG_ID"]
-        return "Invalid Blog ID (should be seven digits!)" unless blog_id.match(/^\d{7}$/)
+        return "Invalid Blog ID (should be between 4 and 8!)" unless blog_id.match(/^\d{4,8}$/)
 
         value = $redis.get("blogs:#{blog_id}")
         if value.nil?

@@ -43,10 +43,10 @@ function updateValue(e) {
     if (val == "") {
         output.textContent = " ";
     } else if (
-        RegExp("^https://artofproblemsolving.com/community/c\\d{7}").test(val)
+        RegExp("^https://artofproblemsolving.com/community/c\\d{4,7}").test(val)
     ) {
         var blog_id = RegExp(
-            "(^https://artofproblemsolving.com/community/c)(\\d{7})(?:\\s+(.*))?"
+            "(^https://artofproblemsolving.com/community/c)(\\d{4,7})(?:\\s+(.*))?"
         ).exec(val)[2];
         output.textContent = pageURL + blog_id;
     } else {

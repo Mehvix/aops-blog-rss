@@ -29,7 +29,7 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
-  nokogiri
+  nokogiri (>= 1.11.4)
   puma
   rake
   redis
