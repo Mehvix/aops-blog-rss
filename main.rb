@@ -2,10 +2,7 @@ require "sinatra/base"
 require "nokogiri"
 require "redis"
 
-# todos
-# catch private blogs
-# feed colors + favicon
-# prevent hibernation
+# todo catch private blogs
 
 class Main < Sinatra::Base
     configure do
@@ -27,7 +24,7 @@ class Main < Sinatra::Base
 
     get "/:blog_id" do
         blog_id = params["blog_id"] #|| ENV["BLOG_ID"]
-        return "Invalid Blog ID (should be between 4 and 8!)" unless blog_id.match(/^\d{4,8}$/)
+        return "Invalid Blog ID!" unless blog_id.match(/^\d{3,}$/)
 
         value = $redis.get("blogs:#{blog_id}")
         if value.nil?

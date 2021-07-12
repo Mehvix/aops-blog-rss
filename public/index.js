@@ -7,7 +7,7 @@ var pageURL = window.location.href;
 
 function gotoF(e) {
     var link = document.getElementById("output").textContent;
-    RegExp(pageURL + "\\d{7}").test(link)
+    RegExp(pageURL + "\\d{3,}").test(link)
         ? window.open(link)
         : console.log("Goto clicked, no valid URL to open!");
 }
@@ -15,7 +15,7 @@ function gotoF(e) {
 function copyF(e) {
     var textToCopy = document.getElementById("output");
 
-    if (RegExp(pageURL + "\\d{7}").test(textToCopy.textContent)) {
+    if (RegExp(pageURL + "\\d{3,}").test(textToCopy.textContent)) {
         var currentRange;
         if (document.getSelection().rangeCount > 0) {
             currentRange = document.getSelection().getRangeAt(0);
@@ -43,10 +43,10 @@ function updateValue(e) {
     if (val == "") {
         output.textContent = " ";
     } else if (
-        RegExp("^https://artofproblemsolving.com/community/c\\d{4,7}").test(val)
+        RegExp("^https://artofproblemsolving.com/community/c\\d{3,}").test(val)
     ) {
         var blog_id = RegExp(
-            "(^https://artofproblemsolving.com/community/c)(\\d{4,7})(?:\\s+(.*))?"
+            "(^https://artofproblemsolving.com/community/c)(\\d{3,})(?:\\s+(.*))?"
         ).exec(val)[2];
         output.textContent = pageURL + blog_id;
     } else {
