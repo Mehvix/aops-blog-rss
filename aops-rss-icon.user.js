@@ -8,11 +8,12 @@
 // @downloadURL https://github.com/Mehvix/aops-blog-rss/raw/master/aops-rss-icon.user.js
 // @updateURL   https://github.com/Mehvix/aops-blog-rss/raw/master/aops-rss-icon.user.js
 // @grant       none
-// @run-at      document-start
-// @version     8-28-2021
+// @run-at      document-end
+// @version     10-20-2021
 // @author      Mehvix
 // @description Adds RSS icon on AoPS blogs
 // @license     GPLv3
+// @icon        https://raw.githubusercontent.com/Mehvix/aops-blog-rss/master/public/favicon.ico
 // ==/UserScript==
 
 let blog_id = RegExp(
@@ -29,7 +30,6 @@ document.getElementsByTagName(
 
 if (AoPS.Community.Views.BlogStats) {
     // if page is a blog
-
     window.addEventListener(
         "load",
         function () {
